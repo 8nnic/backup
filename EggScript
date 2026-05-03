@@ -8,9 +8,9 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "Nic Script v2.3",
-   LoadingTitle = "Nic Script Loading...",
-   LoadingSubtitle = "UNIVERSAL",
+   Name = "Egg Script v2.3",
+   LoadingTitle = "Egg Script Loading...",
+   LoadingSubtitle = "No Key Needed",
    ConfigurationSaving = {
       Enabled = true,
       FolderName = nil,
@@ -21,7 +21,7 @@ local Window = Rayfield:CreateWindow({
       Invite = "noinvitelink",
       RememberJoins = true
    },
-   KeySystem = true,
+   KeySystem = fal,
    KeySettings = {
       Title = "Nic Script Password",
       Subtitle = "Key System",
