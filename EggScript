@@ -1,5 +1,5 @@
 --[[
-    Nic Script - Universal Roblox Script
+    Egg Script - Universal Roblox Script
     Version: 2.4
     Features: Added Deadrail Farm
     UI Library: Rayfield
@@ -2359,7 +2359,7 @@ local DiscordButton = InfoTab:CreateButton({
 -- INFO TAB
 local InfoSection = InfoTab:CreateSection("Script Information")
 
-InfoTab:CreateLabel("Nic Script v2.4 - Universal")
+InfoTab:CreateLabel("Egg Script v2.4 - Universal")
 InfoTab:CreateLabel("Made for Roblox Executors")
 InfoTab:CreateLabel("Created by: Nic")
 
@@ -2382,7 +2382,7 @@ local DiscordButton = InfoTab:CreateButton({
 
 -- Notification on load
 Rayfield:Notify({
-   Title = "Nic Script v2.4 Loaded",
+   Title = "Egg Script v2.4 Loaded",
    Content = "Scanned " .. #PlayerList .. " players in server!",
    Duration = 2,
    Image = 4483362458,
