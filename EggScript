@@ -2345,7 +2345,7 @@ local InfiniteYieldFDButton = OtherScriptsTab:CreateButton({
 local DiscordButton = InfoTab:CreateButton({
    Name = "Forsaken Key Copy",
    Callback = function()
-        setclipboard("Swiziby")
+        setclipboard("Kilo123")
         
         Rayfield:Notify({
            Title = "KEY Copied",
