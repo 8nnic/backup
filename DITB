@@ -1,4 +1,4 @@
--- Made by: Nic
+-- Made by: Nic | Eggroll
 
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
