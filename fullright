@@ -1,0 +1,35 @@
+-- Fullbright Variables and Functions
+local fullbrightEnabled = false
+local brightLoop
+
+local function brightnessLoop()
+    if brightLoop then
+        brightLoop:Disconnect()
+    end
+    local function brightFunc()
+        Lighting.Brightness = 2
+        Lighting.ClockTime = 14
+        Lighting.FogEnd = 100000
+        Lighting.GlobalShadows = false
+        Lighting.OutdoorAmbient = Color3.fromRGB(128, 128, 128)
+    end
+
+    brightLoop = RunService.RenderStepped:Connect(brightFunc)
+end
+
+-- Fullbright Toggle
+local ToggleFullbright = TabVisuals:CreateToggle({
+    Name = "Fullbright (See in Dark)",
+    CurrentValue = false,
+    Flag = "Fullbright",
+    Callback = function(Value)
+        fullbrightEnabled = Value
+        if Value then
+            brightnessLoop()
+        else
+            if brightLoop then
+                brightLoop:Disconnect()
+            end
+        end
+    end,
+})
