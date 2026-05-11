@@ -2,10 +2,11 @@
     Egg Script - Universal Roblox Script
     Version: 2.4
     Features: Added Deadrail Farm
-    UI Library: Rayfield
+    UI Library: WindUI
 ]]--
 
-local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
+WindUI:SetTheme("Dark")
 
 local Window = Rayfield:CreateWindow({
    Name = "Egg Script v2.4",
@@ -782,26 +783,6 @@ local function CreateESP(player)
         local hrp = character:WaitForChild("HumanoidRootPart", 5)
         if not hrp then return end
         
--- Fullbright Variables and Functions
-local fullbrightEnabled = false
-local brightLoop
-
-local function brightnessLoop()
-    if brightLoop then
-        brightLoop:Disconnect()
-    end
-    local function brightFunc()
-        Lighting.Brightness = 2
-        Lighting.ClockTime = 14
-        Lighting.FogEnd = 100000
-        Lighting.GlobalShadows = false
-        Lighting.OutdoorAmbient = Color3.fromRGB(128, 128, 128)
-    end
-
-    brightLoop = RunService.RenderStepped:Connect(brightFunc)
-end
-
-        
         -- Create Highlight
         local highlight = Instance.new("Highlight")
         highlight.Name = "NicScriptESP"
@@ -1307,23 +1288,6 @@ local InteractionESPToggle = VisualsTab:CreateToggle({
             })
         end
    end,
-})
-
--- Fullbright Toggle
-local ToggleFullbright = TabVisuals:CreateToggle({
-    Name = "Fullbright (See in Dark)",
-    CurrentValue = false,
-    Flag = "Fullbright",
-    Callback = function(Value)
-        fullbrightEnabled = Value
-        if Value then
-            brightnessLoop()
-        else
-            if brightLoop then
-                brightLoop:Disconnect()
-            end
-        end
-    end,
 })
 
 -- X-RAY / TRANSPARENT BLOCKS SECTION
