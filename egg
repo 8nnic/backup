@@ -6,7 +6,7 @@
 ]]--
 
 local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
-WindUI:SetTheme("Dark")
+WindUI:SetTheme("Midnight")
 
 local Window = Rayfield:CreateWindow({
    Name = "Egg Script v2.4",
