@@ -8,14 +8,6 @@
 local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
 WindUI:SetTheme("Midnight")
 
-local Window = Rayfield:CreateWindow({
-   Name = "Egg Script v2.4",
-   LoadingTitle = "Egg Script Loading...",
-   LoadingSubtitle = "No Key Needed",
-   ConfigurationSaving = {
-      Enabled = true,
-      FolderName = nil,
-      FileName = "NicScript"
    },
    Discord = {
       Enabled = false,
